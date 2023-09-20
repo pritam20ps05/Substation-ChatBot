@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css
+    "
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}" />
+  </head>
+  <body>
+    <!-- Responsive Navbar -->
+    <div class="navbar">
+      <div class="left-nav">
+        <div class="nav-logo">
+          <!-- <img src="chatbot.png" alt="chatbot"> -->
+          <a href="/" role="button">
+            <p class="logo-name">Substation ChatBot</p>
+          </a>
+        </div>
+        <div class="nav-features">
+          <div class="features-badge">v1.0</div>
+          <p class="features">Quick, Accurate and Integrated OpenAI</p>
+        </div>
+      </div>
+      <div class="right-nav">
+        <span class="socials">
+          <a href="#" role="button"><i class="bx bxl-twitter"></i></a> |
+          <a href="#" role="button"><i class="bx bxl-instagram-alt"></i></a> |
+          <a href="#" role="button"><i class="bx bxl-facebook-circle"></i></a> &nbsp;<span
+            >Ministry of Power Under Govt. of India</span
+          >
+        </span>
+      </div>
+    </div>
+    <!-- Chatbot -->
+    <div class="chatbot">
+      <div class="chatbot-header">
+        <div class="status">
+          <i class="bx bx-conversation"></i>
+          <div class="status-combine">
+            <p class="chatbot-name">ChatBot</p>
+            <div class="chatbot-status">
+              <div class="online-icon"></div>
+              <p>Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-body" id="chat-body">
+        <!-- Starting Intro -->
+        <div class="welcome-chat intro">
+          <h2>Hi User, Ask your query..</h2>
+          <img src="{{ url_for('static', filename='images/bot-img.png') }}" alt="chat-icon" />
+        </div>
+        <div class="example-ques intro">
+          <h5>Examples</h5>
+          <div class="example-container">
+            <div class="example">
+              <p>Tell about the guidelines of testing reactors in substation.</p>
+            </div>
+            <div class="example">
+              <p>What are the permissible limits of various substation equipments?</p>
+            </div>
+            <div class="example">
+              <p>How to resolve unexpected breakdown of surge arrestors?</p>
+            </div>
+          </div>
+        </div>
+        <form id="start-form" class="intro">
+          <p>Set creativity for chatbot</p>
+          <input id="creative-val" type="range" min="0.1" max="1" step="0.1" value="0.5" />
+          <button type="submit">Start Chatting</button>
+        </form>
+
+        <!-- Main Chat Section -->
+        <div class="chat-msg-box chat-loading chat-component d-none">
+          <div class="chat-icon">
+            <img src="{{ url_for('static', filename='images/bot-img.png') }}" alt="chat-icon" />
+          </div>
+          <div class="chat-content">
+            <p class="role">Chatbot</p>
+            <div class="chat-msg">Hi! How may I help you?</div>
+          </div>
+        </div>
+
+        <!-- <div class="user-msg-box">
+          <div class="user-content">
+            <p class="role">You</p>
+            <div class="user-msg">Who is better player, messi or ronaldo?</div>
+          </div>
+          <div class="user-icon">
+            <img src="{{ url_for('static', filename='images/user-img.png') }}" alt="usericon" />
+          </div>
+        </div>
+
+        <div class="chat-msg-box chat-loading chat-loading-typing">
+          <div class="chat-icon">
+            <img src="{{ url_for('static', filename='images/bot-img.png') }}" alt="chat-icon" />
+          </div>
+          <div class="chat-content">
+            <p class="role">Chatbot</p>
+            <div class="chat-msg"><img src="{{ url_for('static', filename='images/chat-loading.gif') }}" alt=""></div>
+          </div>
+        </div> -->
+      </div>
+      <div class="chatbot-msg">
+        <p class="intro">
+          Start chatting now with our smart substation chatbot to clear your queries!!
+        </p>
+        <form id="msg-form" class="chat-component d-none">
+          <div class="input-group mb-3">
+            <input
+              autocomplete="off"
+              name="q"
+              id="msg-text"
+              type="text"
+              class="form-control"
+              placeholder="Ask anything and get standard results..."
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+              <i class="bx bxs-send"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <h3>Substation ChatBot</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque debitis animi inventore ea,
+        quisquam vel beatae officia fuga, molestiae voluptatem ut consequatur.
+      </p>
+      <div class="social-icons">
+        <a href="#" role="button"><i class="bx bxl-twitter"></i></a>
+        <a href="#" role="button"><i class="bx bxl-instagram"></i></a>
+        <a href="#" role="button"><i class="bx bxl-facebook"></i></a>
+        <a href="#" role="button"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+      <span class="footer-links"
+        ><a href="#"
+          >Ministry Of Power Portal
+          <i style="transform: rotate(-45deg)" class="bx bx-right-arrow-alt"></i
+        ></a>
+        &middot; <a href="https://platform.openai.com/docs/introduction">OpenAI Documentation</a></span
+      >
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+      var bot_img = "{{ url_for('static', filename='images/bot-img.png') }}";
+      var user_img = "{{ url_for('static', filename='images/user-img.png') }}";
+      var loading_gif = "{{ url_for('static', filename='images/chat-loading.gif') }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+  </body>
+</html>

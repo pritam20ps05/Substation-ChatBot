@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Substation Maintenance Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+  "
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <!-- Responsive Navbar -->
+    <div class="navbar">
+      <div class="left-nav">
+        <div class="nav-logo">
+          <!-- <img src="chatbot.png" alt="chatbot"> -->
+          <a href="/" role="button">
+            <p class="logo-name">Substation ChatBot</p>
+          </a>
+        </div>
+        <div class="nav-features">
+          <div class="features-badge">v1.0</div>
+          <p class="features">Quick, Accurate and Integrated OpenAI</p>
+        </div>
+      </div>
+      <div class="right-nav">
+        <span class="socials">
+          <a href="#" role="button"><i class="bx bxl-twitter"></i></a> |
+          <a href="#" role="button"><i class="bx bxl-instagram-alt"></i></a> |
+          <a href="#" role="button"><i class="bx bxl-facebook-circle"></i></a> &nbsp;<span
+            >Ministry of Power Under Govt. of India</span
+          >
+        </span>
+      </div>
+    </div>
+    <!-- Main Page -->
+    <div class="landing-page">
+      <div class="landing-feature">
+        <div class="landing-features-badge">New in v1.0</div>
+        <p class="landing-features">Realtime chat, temperature mode and more!!</p>
+      </div>
+      <div class="landing-banner">
+        <div class="chatbot-logo">
+          <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="chatbotlogo" />
+        </div>
+        <h2 class="landing-title">Realtime Maintenance Queries with Substation ChatBot</h2>
+        <p class="landing-desc">
+          Powerful, extensible and quick responsive chatbot integrated with OpenAI API with whole
+          lot of information about substation equipments and more...
+        </p>
+      </div>
+      <div class="landing-buttons container">
+        <a href="/chatbot" id="explore" role="button">Explore Our ChatBot <i class="bx bx-world"></i></a>
+        <a href="https://platform.openai.com/docs/introduction" id="docs" role="button"><i class="bx bxs-book-open"></i> Read Docs</a>
+      </div>
+      <p class="landing-footer">
+        Currently v1.0 &middot; <a href="">Documentation</a> &middot;
+        <a href="">Temperature mode</a>
+      </p>
+    </div>
+    <div class="line"></div>
+    <div class="feature-section">
+      <div class="feature">
+        <div class="feature-icon" id="purple-icon">
+          <img
+            src="{{ url_for('static', filename='images/artificial-intelligence.png') }}"
+            alt="aiicon"
+          />
+        </div>
+        <h2 class="feature-title">Integrated Smart OpenAI</h2>
+        <p class="feature-content">
+          Automated and integrated with a smart conversational AI interface for great substation
+          maintenance queries, accelerated time-to-fill and reduced manual work for your employees.
+        </p>
+        <a href="https://platform.openai.com/overview" role="button"></a>
+        <span class="feature-link"
+          >Read Docs <i style="transform: rotate(180deg)" class="bx bx-arrow-back"></i
+        ></span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" id="red-icon">
+          <img src="{{ url_for('static', filename='images/thermometer.png') }}" alt="temperature" />
+        </div>
+        <h2 class="feature-title">Creative Temperature Mode</h2>
+        <p class="feature-content">
+          The temperature determines how greedy the generative model is. is a parameter of OpenAI
+          ChatGPT, GPT-3 and GPT-4 models that governs the randomness and thus the creativity of the
+          responses.
+        </p>
+        <a href="https://platform.openai.com/docs/api-reference/chat/create" role="button"></a>
+        <span class="feature-link"
+          >Read Docs <i style="transform: rotate(180deg)" class="bx bx-arrow-back"></i
+        ></span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" id="blue-icon">
+          <img src="{{ url_for('static', filename='images/time.png') }}" alt="quick" />
+        </div>
+        <h2 class="feature-title">Accelerated Response Timing</h2>
+        <p class="feature-content">
+          Low-latency and quick responses with OpenAPI 3.5 model to answer to queries semantically
+          and accurately. Faster processing and flow of data.
+        </p>
+        <a href="https://platform.openai.com/docs/guides/gpt" role="button"></a>
+        <span class="feature-link"
+          >Read Docs <i style="transform: rotate(180deg)" class="bx bx-arrow-back"></i
+        ></span>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" id="green-icon">
+          <img src="{{ url_for('static', filename='images/guidelines.png') }}" alt="guidelines" />
+        </div>
+        <h2 class="feature-title">Industrial & Safety Guidelines</h2>
+        <p class="feature-content">
+          Responsible use of ChatBot, along with appropriate regulation and oversight, is essential
+          to ensure that it is used for good and benefits society as a whole.
+        </p>
+        <a href="https://platform.openai.com/docs/guides/moderation/overview" role="button"></a>
+        <span class="feature-link"
+          >Read Docs
+          <i style="transform: rotate(180deg); text-decoration: none" class="bx bx-arrow-back"></i
+        ></span>
+      </div>
+    </div>
+    <div class="line"></div>
+    <!-- FAQ - Accordion -->
+    <p class="faq-title">Frequently Asked Questions</p>
+    <div class="faq-container">
+      <div class="faq-img">
+        <img src="{{ url_for('static', filename='images/faq.svg') }}" alt="faq" />
+      </div>
+      <div class="faq-group">
+        <div class="faq">
+          <div class="question">
+            <h3>How can I develop a substation maintenance plan?</h3>
+
+            <svg width="15" height="10" viewBox="0 0 42 25">
+              <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Developing a maintenance plan involves assessing the specific needs of your
+              substation, setting maintenance schedules, budgeting for resources, and ensuring
+              compliance with relevant standards and regulations.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="question">
+            <h3>What safety precautions are essential during substation maintenance?</h3>
+
+            <svg width="15" height="10" viewBox="0 0 42 25">
+              <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Safety is paramount during substation maintenance. Technicians should wear appropriate
+              personal protective equipment (PPE), follow lockout/tagout procedures, and be trained
+              in handling high-voltage equipment.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="question">
+            <h3>What are the key tasks involved in circuit breaker maintenance?</h3>
+
+            <svg width="15" height="10" viewBox="0 0 42 25">
+              <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              Circuit breaker maintenance involves testing, cleaning, lubrication, and inspection to
+              ensure proper operation, including verifying the arc quenching capability and checking
+              control circuits.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="question">
+            <h3>What is reactor test in a substation?</h3>
+
+            <svg width="15" height="10" viewBox="0 0 42 25">
+              <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="answer">
+            <p>
+              A reactor test is a procedure used in nuclear power plants to assess the safety and
+              performance of nuclear reactors. During a reactor test, various parameters, such as
+              temperature, pressure, and reactor power output, are measured and controlled to ensure
+              that the reactor operates within safe limits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <h3>Substation ChatBot</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque debitis animi inventore ea,
+        quisquam vel beatae officia fuga, molestiae voluptatem ut consequatur.
+      </p>
+      <div class="social-icons">
+        <a href="#" role="button"><i class="bx bxl-twitter"></i></a>
+        <a href="#" role="button"><i class="bx bxl-instagram"></i></a>
+        <a href="#" role="button"><i class="bx bxl-facebook"></i></a>
+        <a href="#" role="button"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+      <span class="footer-links"
+        ><a href="#"
+          >Ministry Of Power Portal
+          <i style="transform: rotate(-45deg)" class="bx bx-right-arrow-alt"></i
+        ></a>
+        &middot; <a href="https://platform.openai.com/docs/introduction">OpenAI Documentation</a></span
+      >
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>
