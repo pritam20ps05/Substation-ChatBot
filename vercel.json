@@ -1,0 +1,16 @@
+{
+    "name": "SubstatonBot",
+    "version": 1,
+    "builds": [
+        {
+            "src": "wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "wsgi.py"
+        }
+    ]
+}
